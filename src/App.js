@@ -7,22 +7,31 @@ function App() {
 
 
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
+        <Profile name='Dhrubo' age='27'></Profile>
+        <Profile name='Montasir' age='72'></Profile>
+        <Profile name='Azad' age='37'></Profile>
+         
       </header>
     </div>
   );
+
+  function Profile(props) {
+  const profileStyle = {
+    width:"550px",
+    height:'200px',
+    border:'4px solid gold',
+    margin:'15px',
+    borderRadius:'8px'
+      
+  }
+
+    return(
+     <div style={profileStyle}>
+       <h1>Name : {props.name}</h1>
+       <h2>Age : {props.age}</h2>
+     </div>
+    )
+  }
 
 }
 
