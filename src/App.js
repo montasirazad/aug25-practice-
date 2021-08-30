@@ -2,20 +2,24 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const people = ['Dhrubo','Fozu','Taki','Farabe','Uzzal','Tomal','kanon']
+  const peoples = ['Dhr', 'Foz', 'Tak', 'Far', 'Uzz', 'Tom', 'kan']
   return (
     <div className="App">
 
 
       <header className="App-header">
-        
+
         <Profile name='Dhrubo' age='27' address='taltola'></Profile>
         <Profile name='Fozu' age='72' address='notunbag'></Profile>
         <Profile name='Taki' age='37' address='c-block'></Profile>
         <Profile name='Farabe' age='1000' address='bashabo'></Profile>
         <Profile name='Uzzal' age='5' address='c-block'></Profile>
         <Profile name='Tomal' age='57' address='b-block'></Profile>
-        <Profile name={people[6]} age='17' address='sipaibag'></Profile>  
+        <Profile name={peoples[6]} age='17' address='sipaibag'></Profile>
+
+        {
+          peoples.map(person => <Profile name={person}></Profile>)
+        }
 
       </header>
     </div>
